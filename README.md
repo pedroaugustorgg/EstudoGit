@@ -124,6 +124,10 @@
     
             git push https://github.com/pedroaugustorgg/EstudoGit DevPedro
 
+- 💡 **Dica valiosa:** Para sincronizar diretamente na branch remota sem a necessidade de validar pull request lá no GitHub, deve-se utilizar o seguinte comando:
+        
+        git push --set-upstream origin <NomeBranchRemota>
+
 <br/>
 
 ### 🆘 Resolução de conflitos (erros comuns):
