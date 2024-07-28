@@ -93,7 +93,7 @@
             
             git checkout main
             git merge DevPedro
-        - **⚠️ Observação.:** Para realizar o merge, é necessário estar no branch que deverá receber as alterações. O merge pode automático ou manual. O merge automático será feito em arquivos textos que não sofreram alterações nas mesmas linhas, já o merge manual será feito em arquivos textos que sofreram alterações nas mesmas linhas. A mensagem indicando um merge manual será:
+        - ⚠️ **Observação.:** Para realizar o merge, é necessário estar no branch que deverá receber as alterações. O merge pode automático ou manual. O merge automático será feito em arquivos textos que não sofreram alterações nas mesmas linhas, já o merge manual será feito em arquivos textos que sofreram alterações nas mesmas linhas. A mensagem indicando um merge manual será:
 
                 Automerging meu_arquivo.txt
                 CONFLICT (content): Merge conflict in meu_arquivo.txt
@@ -115,7 +115,7 @@
 
 <br/>
 
-### 🖥️ → 🌐 Sincronizando repositório REMOTO do GitHub com repositório LOCAL:
+### 🖥️ → 🌐 Sincronizando repositório REMOTO do GitHub com conteúdo do repositório LOCAL:
 - Com todos os commits devidamente realizados, você pode enviar tudo o que você fez localmente para atualizar o repositório remoto com o seguinte comando:
     
         git push <remoteURL> <NomeDaBranch>
@@ -124,15 +124,32 @@
     
             git push https://github.com/pedroaugustorgg/EstudoGit DevPedro
 
-- 💡 **Dica valiosa:** Para sincronizar diretamente na branch remota sem a necessidade de validar pull request lá no GitHub, deve-se utilizar o seguinte comando:
+- 💡 **Dica valiosa¹:** Para sincronizar todas as branches locais com as branches remotas, basta utilizar o seguinte comando:
+        
+        git push --all origin
+
+- 💡 **Dica valiosa²:** Para sincronizar uma branch específica diretamente na branch remota (sem a necessidade de validar pull request lá no GitHub), deve-se utilizar o seguinte comando:
         
         git push --set-upstream origin <NomeBranchRemota>
+  - ⚠️ **Observação.:** NÃO irá funcionar caso seja o primeiro push da máquina local para o repositório remoto.
 
 <br/>
 
 ### 🆘 Resolução de conflitos (erros comuns):
 
-- ✅ [Lidar com erros non-fast-forward](https://docs.github.com/pt/enterprise-cloud@latest/get-started/using-git/dealing-with-non-fast-forward-errors)
-  - Exemplo prático:
+- ❌ **Erro:** *non-fast-forward*
+  - **Problema:** Repositório local não sincronizado com repositório online
+  - [Link com solução](https://docs.github.com/pt/enterprise-cloud@latest/get-started/using-git/dealing-with-non-fast-forward-errors) ✅
+    - Exemplo prático:
 
-        ❌! [rejected]        main -> main (non-fast-forward)❌
+                ! [rejected]        main -> main (non-fast-forward)
+
+<br/>
+
+- ❌ **Erro:** *main does not match any*
+  - **Problema:** Divergência de match entre as branches
+  - [Link com solução](https://stackoverflow.com/questions/4181861/message-src-refspec-master-does-not-match-any-when-pushing-commits-in-git) ✅
+    - Exemplo prático:
+        
+                error: src refspec main does not match any
+                error: failed to push some refs to <URLdaBranch>
