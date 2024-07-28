@@ -38,7 +38,7 @@
 
 <br/>
 
-## 🌐 ➡️ 🖥️ Sincronizando repositório LOCAL com conteúdo do repositório REMOTO do GitHub:
+## 🌐 → 🖥️ Sincronizando repositório LOCAL com conteúdo do repositório REMOTO do GitHub:
 - Caso seu usuário e e-mail já esteja sincronizado com o repositório:
         
         git pull
@@ -115,7 +115,7 @@
 
 <br/>
 
-### 🖥️ ➡️ 🌐 Sincronizando repositório REMOTO do GitHub com repositório LOCAL:
+### 🖥️ → 🌐 Sincronizando repositório REMOTO do GitHub com repositório LOCAL:
 - Com todos os commits devidamente realizados, você pode enviar tudo o que você fez localmente para atualizar o repositório remoto com o seguinte comando:
     
         git push <remoteURL> <NomeDaBranch>
@@ -125,3 +125,10 @@
             git push https://github.com/pedroaugustorgg/EstudoGit DevPedro
 
 <br/>
+
+### 🆘 Resolução de conflitos (erros comuns):
+
+- ✅ [Lidar com erros non-fast-forward](https://docs.github.com/pt/enterprise-cloud@latest/get-started/using-git/dealing-with-non-fast-forward-errors)
+  - Exemplo prático:
+
+        ❌! [rejected]        main -> main (non-fast-forward)❌
