@@ -3,17 +3,17 @@
 📗**Repositório de apoio/inspiração:** [leocomelli/git.md](https://gist.github.com/leocomelli/2545add34e4fec21ec16)
 
 ## ÍNDICE
- <a href="#section1" style="text-decoration: none;">**1.**<img src="https://img.icons8.com/?size=100&id=4VuUVaM5Sn5D&format=png&color=000000" alt="clone" width="22px"> Clonando um repositório do GitHub para sua pasta local</a>
+ <a href="#section1" style="text-decoration: none">**1.**<img src="https://img.icons8.com/?size=100&id=4VuUVaM5Sn5D&format=png&color=000000" alt="clone" width="22px"> Clonando um repositório do GitHub para sua pasta local</a>
 
- <a href="#section2" style="text-decoration: none;">**2.** ⚙️ Como setar seu usuário e e-mail do GitHub localmente para trabalhar com repositórios remotos (só precisa fazer uma vez)</a>
+ <a href="#section2" style="text-decoration: none">**2.** ⚙️ Como setar seu usuário e e-mail do GitHub localmente para trabalhar com repositórios remotos (só precisa fazer uma vez)</a>
 
- <a href="#section3" style="text-decoration: none;">**3.** 🌐 → 🖥️ Sincronizando repositório LOCAL com conteúdo do repositório REMOTO do GitHub (*pull*)</a>
+ <a href="#section3" style="text-decoration: none">**3.** 🌐 → 🖥️ Sincronizando repositório LOCAL com conteúdo do repositório REMOTO do GitHub (*pull*)</a>
 
- <a href="#section5" style="text-decoration: none;">**4.** 🖥️ → 🌐 Sincronizando repositório REMOTO do GitHub com conteúdo do repositório LOCAL (*push*)</a>
+ <a href="#section5" style="text-decoration: none">**4.** 🖥️ → 🌐 Sincronizando repositório REMOTO do GitHub com conteúdo do repositório LOCAL (*push*)</a>
  
- <a href="#section4" style="text-decoration: none;">**5.** 🛠️ Gestão de repositório (add, *branches* e *commits*)</a>
+ <a href="#section4" style="text-decoration: none">**5.** 🛠️ Gestão de repositório (add, *branches* e *commits*)</a>
 
- <a href="#section6" style="text-decoration: none;">**6.** 🆘 Resolução de conflitos (erros comuns)</a>
+ <a href="#section6" style="text-decoration: none">**6.** 🆘 Resolução de conflitos (erros comuns)</a>
 
  <a href="#section7" text-decoration=none>**7.** <img src="https://img.icons8.com/?size=100&id=K7ebDTcbruY8&format=png&color=000000" alt="teamgroup" width="25px"> Autores</a>
 
@@ -166,7 +166,7 @@
 
 - ### ❌ Erro: *non-fast-forward*
   - **Problema:** Repositório local não sincronizado com repositório online e pode ocorrer durante um push
-  - [Link com solução](https://docs.github.com/pt/enterprise-cloud@latest/get-started/using-git/dealing-with-non-fast-forward-errors) ✅ A dica é realizar uma sincronia do repositório remoto com o seurepositório local através do comando "git pull origin <nome_da_branch>"
+  - [Link com solução](https://docs.github.com/pt/enterprise-cloud@latest/get-started/using-git/dealing-with-non-fast-forward-errors) ✅ A dica é realizar uma sincronia do repositório remoto com o seu repositório local através do comando "git rebase"
   - Exemplo prático do erro:
 
                 $ git push 
