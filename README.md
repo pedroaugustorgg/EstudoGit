@@ -192,7 +192,7 @@
 
 <br/>
 
-- ❌ **Erro:** *Pulling is not possible*
+- ### ❌ Erro: *Pulling is not possible*
   - **Problema:** Normalmente ocorre quando você tenta realizar um pull (puxar conteúdo do repositório remoto para o local) e existe alguma alteração no seu repositório local que precisa ser desfeita ou commitada para ser possível seguir com o pull.
   - [Link com solução](https://pt.stackoverflow.com/questions/455932/não-consigo-fazer-git-pull-no-servidor) ✅ A dica pra solucionar esta intercorrência é conferir alterações ainda não commitadas com o comando "git status" e realizar o commit ou desfazer alguma alteração com o comando "git checkout <arquivo.txt>".
   
