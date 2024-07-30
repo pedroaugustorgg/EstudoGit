@@ -1,15 +1,11 @@
 # Estudo de Git/GitHub
-## Autores
-
-| [<img loading="lazy" src="https://avatars.githubusercontent.com/u/165854883?v=4" width=115><br><sub>Gabriel Campos</sub>](https://github.com/Super-Link) |  [<img loading="lazy" src="https://avatars.githubusercontent.com/u/80770771? v=4" width=115><br><sub>Pedro Guedes</sub>](https://github.com/pedroaugustorgg) |  [<img loading="lazy" src="https://avatars.githubusercontent.com/u/93458723?v=4" width=115><br><sub>Sergio Campos</sub>](https://github.com/camposcomunicacao) |
-| :---: | :---: | :---: |
 
 📗**Repositório de apoio/inspiração:** [leocomelli/git.md](https://gist.github.com/leocomelli/2545add34e4fec21ec16)
 
 # 🖥️ Principais comandos para seu versionamento de código via terminal com git:
 
 ## Clonando um repositório já existente para sua pasta local:
-- O comando "git clone" serve para clonar todo o repositório remoto diretamente para um repositório local, é bem simples e ocorre da seguinte forma:
+- O comando "git clone" serve para clonar todo o repositório remoto diretamente na sua máquina, isso fará com que seja criado um arquivo oculto ".git" na pasta local onde vc irá clonar o repositório e você poderá começar a gerenciar o repositório localmente. É bem simples a execução do comando e ocorre da seguinte forma:
         
         git clone <URLdoRepositório>
     
@@ -35,6 +31,12 @@
     -  **Exemplo prático:**
 
             git config --global user.email pedroaugustorgg@gmail.com
+
+- ### Conferindo usuário e email setados:
+
+        git config user.name && git config user.email
+
+  -  ⚠️ **Observação:** Caso você tenha setado o usuário e/ou e-mail errado, basta ir na pasta oculta ".git" do seu repositório e alterar o arquivo "config", lá estará o seu usuário e senha setados anteriormente.
 
 <br/>
 
@@ -93,7 +95,7 @@
             
             git checkout main
             git merge DevPedro
-        - ⚠️ **Observação.:** Para realizar o merge, é necessário estar no branch que deverá receber as alterações. O merge pode automático ou manual. O merge automático será feito em arquivos textos que não sofreram alterações nas mesmas linhas, já o merge manual será feito em arquivos textos que sofreram alterações nas mesmas linhas. A mensagem indicando um merge manual será:
+        - ⚠️ **Observação.:** Para realizar o merge, é necessário estar no branch que deverá receber as alterações. O merge pode ser automático ou manual. 
 
                 Automerging meu_arquivo.txt
                 CONFLICT (content): Merge conflict in meu_arquivo.txt
@@ -111,6 +113,12 @@
 - ### COMMITS ✅
     O *commit* serve para como um "registro" de todas as tratativas realizadas no repositório em questão (seja ajuste em linhas de código ou até mesmo adição/exclusão de arquivos) desde a última sincronia realizada.
 
+        git commit -m "Título do commit" -m "descrição do commit"
+
+  - 💡 **Dica valiosa:** A sequencia de comandos mais comum para verificar os arquivos editados e salvar todas as suas alterações locais em um commit é a seguinte:
+
+        git status
+        git add .
         git commit -m "Título do commit" -m "descrição do commit"
 
 <br/>
@@ -138,18 +146,51 @@
 ### 🆘 Resolução de conflitos (erros comuns):
 
 - ❌ **Erro:** *non-fast-forward*
-  - **Problema:** Repositório local não sincronizado com repositório online
-  - [Link com solução](https://docs.github.com/pt/enterprise-cloud@latest/get-started/using-git/dealing-with-non-fast-forward-errors) ✅
-    - Exemplo prático:
+  - **Problema:** Repositório local não sincronizado com repositório online e pode ocorrer durante um push
+  - [Link com solução](https://docs.github.com/pt/enterprise-cloud@latest/get-started/using-git/dealing-with-non-fast-forward-errors) ✅ A dica é realizar uma sincronia do repositório remoto com o seurepositório local através do comando "git pull origin <nome_da_branch>"
+    - Exemplo prático do erro:
 
                 ! [rejected]        main -> main (non-fast-forward)
 
 <br/>
 
 - ❌ **Erro:** *main does not match any*
-  - **Problema:** Divergência de match entre as branches
-  - [Link com solução](https://stackoverflow.com/questions/4181861/message-src-refspec-master-does-not-match-any-when-pushing-commits-in-git) ✅
-    - Exemplo prático:
+  - **Problema:** Divergência de match entre as branches, pode ocorrer ao fazer um push do repositório local para o remoto.
+  - [Link com solução](https://stackoverflow.com/questions/4181861/message-src-refspec-master-does-not-match-any-when-pushing-commits-in-git) ✅ A dica é verificar se os nomes da(s) branch(es) local (comando "git branch") estão iguais aos nomes das branches remotas, após isso, realizar um push específico da branch desejada com o comando "git push origin <nome_da_branch>".
+    - Exemplo prático do erro:
         
                 error: src refspec main does not match any
                 error: failed to push some refs to <URLdaBranch>
+
+<br/>
+
+- ❌ **Erro:** *Merge conflict*
+  - **Problema:** Como o merge automático é feito em arquivos textos que não sofreram alterações nas mesmas linhas, o merge manual precisa ser feito em arquivos textos que sofreram alterações nas mesmas linhas. Caso não seja feito, isso resultará em um conflito.
+  - [Link com solução](https://www.dio.me/articles/corrigindo-conflitos-em-merges-no-git) ✅ A dica é adicionar os arquivos com o comando "git add <nome_do_arquivo>" ou "git add .", commitar as alterações já adicionadas e realizar o merge posteriormente.
+    - Exemplo prático do erro:
+
+                Automerging <NomeDoArquivo.txt>
+                CONFLICT (content): Merge conflict in meu_arquivo.txt
+                Automatic merge failed; fix conflicts and then commit the result.
+
+<br/>
+
+- ❌ **Erro:** *Pulling is not possible*
+  - **Problema:** Normalmente ocorre quando você tenta realizar um pull (puxar conteúdo do repositório remoto para o local) e existe alguma alteração no seu repositório local que precisa ser desfeita ou commitada para ser possível seguir com o pull.
+  - [Link com solução](https://pt.stackoverflow.com/questions/455932/não-consigo-fazer-git-pull-no-servidor) ✅ A dica pra solucionar esta intercorrência é conferir alterações ainda não commitadas com o comando "git status" e realizar o commit ou desfazer alguma alteração com o comando "git checkout <arquivo.txt>".
+  
+    - 💡 **Dica valiosa:** Para desfazer TODAS as alterações locais NÃO COMITADAS você pode usar o comando "git reset --hard HEAD".
+    - Exemplo prático do erro:
+
+                $ git pull
+                error: Pulling is not possible because you have unmerged files.
+                hint: Fix them up in the work tree, and then use 'git add/rm <file>'
+                hint: as appropriate to mark resolution and make a commit.
+                fatal: Exiting because of an unresolved conflict.
+
+<br/>
+
+## Autores
+
+| [<img loading="lazy" src="https://avatars.githubusercontent.com/u/165854883?v=4" width=115><br><sub>Gabriel Campos</sub>](https://github.com/Super-Link) |  [<img loading="lazy" src="https://avatars.githubusercontent.com/u/80770771? v=4" width=115><br><sub>Pedro Guedes</sub>](https://github.com/pedroaugustorgg) |  [<img loading="lazy" src="https://avatars.githubusercontent.com/u/93458723?v=4" width=115><br><sub>Sergio Campos</sub>](https://github.com/camposcomunicacao) |
+| :---: | :---: | :---: |
