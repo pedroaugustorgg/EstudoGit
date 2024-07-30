@@ -1,25 +1,25 @@
-# Estudo de Git/GitHub
+# <img src="https://img.icons8.com/?size=100&id=20906&format=png&color=000000" alt="branches" width="30px">🖥️ Principais comandos para seu versionamento de código via terminal com git
 
 📗**Repositório de apoio/inspiração:** [leocomelli/git.md](https://gist.github.com/leocomelli/2545add34e4fec21ec16)
 
 ## ÍNDICE
- <a href="#section1">1. 🖥️ Principais comandos para seu versionamento de código via terminal com git</a>
+ <a href="#section1">**1.**<img src="https://img.icons8.com/?size=100&id=4VuUVaM5Sn5D&format=png&color=000000" alt="clone" width="22px"> Clonando um repositório do GitHub para sua pasta local</a>
 
- <a href="#section2">2. ⚙️ Como setar seu usuário e e-mail do GitHub localmente para trabalhar com repositórios remotos (só precisa fazer uma vez)</a>
+ <a href="#section2">**2.** ⚙️ Como setar seu usuário e e-mail do GitHub localmente para trabalhar com repositórios remotos (só precisa fazer uma vez)</a>
 
- <a href="#section3">3. 🌐 → 🖥️ Sincronizando repositório LOCAL com conteúdo do repositório REMOTO do GitHub:</a>
+ <a href="#section3">**3.** 🌐 → 🖥️ Sincronizando repositório LOCAL com conteúdo do repositório REMOTO do GitHub (*pull*)</a>
 
- <a href="#section4">4. 🛠️ Gestão de repositório (add, *branches* e *commits*)</a>
+ <a href="#section4">**4.** 🛠️ Gestão de repositório (add, *branches* e *commits*)</a>
 
- <a href="#section5">5. 🖥️ → 🌐 Sincronizando repositório REMOTO do GitHub com conteúdo do repositório LOCAL:</a>
+ <a href="#section5">**5.** 🖥️ → 🌐 Sincronizando repositório REMOTO do GitHub com conteúdo do repositório LOCAL (*push*)</a>
 
- <a href="#section6">6. 🆘 Resolução de conflitos (erros comuns):</a>
+ <a href="#section6">**6.** 🆘 Resolução de conflitos (erros comuns)</a>
+
+ <a href="#section7">**7.** <img src="https://img.icons8.com/?size=100&id=K7ebDTcbruY8&format=png&color=000000" alt="teamgroup" width="25px"> Autores</a>
 
  <hr><br>
 
-##  <p id="section1"> 🖥️ Principais comandos para seu versionamento de código via terminal com git:
-
-### Clonando um repositório já existente para sua pasta local:
+## <p id="section1"> <img src="https://img.icons8.com/?size=100&id=4VuUVaM5Sn5D&format=png&color=000000" alt="clone" width="25px"> Clonando um repositório do GitHub para sua pasta local:
 - O comando "git clone" serve para clonar todo o repositório remoto diretamente na sua máquina, isso fará com que seja criado um arquivo oculto ".git" na pasta local onde vc irá clonar o repositório e você poderá começar a gerenciar o repositório localmente. É bem simples a execução do comando e ocorre da seguinte forma:
         
         git clone <URLdoRepositório>
@@ -55,8 +55,8 @@
 
 <br/>
 
-## <p id="section3"> 🌐 → 🖥️ Sincronizando repositório LOCAL com conteúdo do repositório REMOTO do GitHub:
-- Caso seu usuário e e-mail já esteja sincronizado com o repositório:
+## <p id="section3"> 🌐 → 🖥️ Sincronizando repositório LOCAL com conteúdo do repositório REMOTO do GitHub (*pull*):
+- Caso seu usuário e e-mail já esteja setado no repositório local, para importar o conteúdo do GitHub para sua máquina, basta utilizar o seguinte comando:
         
         git pull
 
@@ -71,7 +71,7 @@
 <br/>
 
 ## <p id="section4"> 🛠️ Gestão de repositório (add, *branches* e *commits*)
-- ### ADD ➕
+- ### ➕ ADD
     O comando "git add" serve para adicionar os arquivos com alterações realizadas no repositório dentro do *commit* a ser realizado posteriormente. Segue um exemplo prático:
 
             git add index.html
@@ -82,7 +82,7 @@
 
 <br/>
 
-- ### BRANCHES 〒⑁
+- ### <img src="https://img.icons8.com/?size=100&id=n7YnpFzywxHh&format=png&color=000000" alt="branches" width="25px"> BRANCHES
     As *branches* são basicamente os "setores" dentro do mesmo repositório que podem ser utilizadas de forma simultânea e paralela ao setor/branch principal, que geramente é chamada de ***main*** ou ***master*** por padrão, porém pode ser qualquer nome que o dono do respositório queira chamar. Para visualizar as branches continas no repositório local, você pode utilizar o seguinte comando:
             
             git branch
@@ -125,7 +125,7 @@
 
 <br/>
 
-- ### COMMITS ✅
+- ### <img src="https://img.icons8.com/?size=100&id=Cz0Q4xlXhAVM&format=png&color=000000" alt="commits" width="25px"> COMMITS
     O *commit* serve para como um "registro" de todas as tratativas realizadas no repositório em questão (seja ajuste em linhas de código ou até mesmo adição/exclusão de arquivos) desde a última sincronia realizada.
 
         git commit -m "Título do commit" -m "descrição do commit"
@@ -140,7 +140,7 @@
 
 <br/>
 
-## <p id="section5"> 🖥️ → 🌐 Sincronizando repositório REMOTO do GitHub com conteúdo do repositório LOCAL:
+## <p id="section5"> 🖥️ → 🌐 Sincronizando repositório REMOTO do GitHub com conteúdo do repositório LOCAL (*push*):
 - Com todos os commits devidamente realizados, você pode enviar tudo o que você fez localmente para atualizar o repositório remoto com o seguinte comando:
     
         git push <remoteURL> <NomeDaBranch>
@@ -207,7 +207,7 @@
 
 <br/>
 
-## Autores
+## <p id="section7"> <img src="https://img.icons8.com/?size=100&id=K7ebDTcbruY8&format=png&color=000000" alt="teamgroup" width="30px"> Autores
 
 | [<img loading="lazy" src="https://avatars.githubusercontent.com/u/165854883?v=4" width=115><br><sub>Gabriel Campos</sub>](https://github.com/Super-Link) |  [<img loading="lazy" src="https://avatars.githubusercontent.com/u/80770771? v=4" width=115><br><sub>Pedro Guedes</sub>](https://github.com/pedroaugustorgg) |  [<img loading="lazy" src="https://avatars.githubusercontent.com/u/93458723?v=4" width=115><br><sub>Sergio Campos</sub>](https://github.com/camposcomunicacao) |
 | :---: | :---: | :---: |
