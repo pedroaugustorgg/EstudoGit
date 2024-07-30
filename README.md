@@ -148,7 +148,7 @@
 - ❌ **Erro:** *non-fast-forward*
   - **Problema:** Repositório local não sincronizado com repositório online e pode ocorrer durante um push
   - [Link com solução](https://docs.github.com/pt/enterprise-cloud@latest/get-started/using-git/dealing-with-non-fast-forward-errors) ✅ A dica é realizar uma sincronia do repositório remoto com o seurepositório local através do comando "git pull origin <nome_da_branch>"
-    - Exemplo prático do erro:
+  - Exemplo prático do erro:
 
                 ! [rejected]        main -> main (non-fast-forward)
 
@@ -157,7 +157,7 @@
 - ❌ **Erro:** *main does not match any*
   - **Problema:** Divergência de match entre as branches, pode ocorrer ao fazer um push do repositório local para o remoto.
   - [Link com solução](https://stackoverflow.com/questions/4181861/message-src-refspec-master-does-not-match-any-when-pushing-commits-in-git) ✅ A dica é verificar se os nomes da(s) branch(es) local (comando "git branch") estão iguais aos nomes das branches remotas, após isso, realizar um push específico da branch desejada com o comando "git push origin <nome_da_branch>".
-    - Exemplo prático do erro:
+  - Exemplo prático do erro:
         
                 error: src refspec main does not match any
                 error: failed to push some refs to <URLdaBranch>
@@ -167,7 +167,7 @@
 - ❌ **Erro:** *Merge conflict*
   - **Problema:** Como o merge automático é feito em arquivos textos que não sofreram alterações nas mesmas linhas, o merge manual precisa ser feito em arquivos textos que sofreram alterações nas mesmas linhas. Caso não seja feito, isso resultará em um conflito.
   - [Link com solução](https://www.dio.me/articles/corrigindo-conflitos-em-merges-no-git) ✅ A dica é adicionar os arquivos com o comando "git add <nome_do_arquivo>" ou "git add .", commitar as alterações já adicionadas e realizar o merge posteriormente.
-    - Exemplo prático do erro:
+  - Exemplo prático do erro:
 
                 Automerging <NomeDoArquivo.txt>
                 CONFLICT (content): Merge conflict in meu_arquivo.txt
@@ -180,7 +180,7 @@
   - [Link com solução](https://pt.stackoverflow.com/questions/455932/não-consigo-fazer-git-pull-no-servidor) ✅ A dica pra solucionar esta intercorrência é conferir alterações ainda não commitadas com o comando "git status" e realizar o commit ou desfazer alguma alteração com o comando "git checkout <arquivo.txt>".
   
     - 💡 **Dica valiosa:** Para desfazer TODAS as alterações locais NÃO COMITADAS você pode usar o comando "git reset --hard HEAD".
-    - Exemplo prático do erro:
+  - Exemplo prático do erro:
 
                 $ git pull
                 error: Pulling is not possible because you have unmerged files.
