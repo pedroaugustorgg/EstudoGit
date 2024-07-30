@@ -9,9 +9,9 @@
 
  <a href="#section3" style="text-decoration:none;">**3.** 🌐 → 🖥️ Sincronizando repositório LOCAL com conteúdo do repositório REMOTO do GitHub (*pull*)</a>
 
- <a href="#section4" style="text-decoration:none;">**4.** 🛠️ Gestão de repositório (add, *branches* e *commits*)</a>
+ <a href="#section4" style="text-decoration:none;">**4.** 🖥️ → 🌐 Sincronizando repositório REMOTO do GitHub com conteúdo do repositório LOCAL (*push*)</a>
 
- <a href="#section5" style="text-decoration:none;">**5.** 🖥️ → 🌐 Sincronizando repositório REMOTO do GitHub com conteúdo do repositório LOCAL (*push*)</a>
+ <a href="#section5" style="text-decoration:none;">**5.** 🛠️ Gestão de repositório (add, *branches* e *commits*)</a>
 
  <a href="#section6" style="text-decoration:none;">**6.** 🆘 Resolução de conflitos (erros comuns)</a>
 
@@ -70,7 +70,7 @@
 
 <br/>
 
-## <p id="section5"> 🖥️ → 🌐 Sincronizando repositório REMOTO do GitHub com conteúdo do repositório LOCAL (*push*):
+## <p id="section4"> 🖥️ → 🌐 Sincronizando repositório REMOTO do GitHub com conteúdo do repositório LOCAL (*push*):
 - Com todos os commits devidamente realizados, você pode enviar tudo o que você fez localmente para atualizar o repositório remoto com o seguinte comando:
     
         git push <remoteURL> <NomeDaBranch>
@@ -90,7 +90,7 @@
 
 <br/>
 
-## <p id="section4"> 🛠️ Gestão de repositório (add, *branches* e *commits*)
+## <p id="section5"> 🛠️ Gestão de repositório (add, *branches* e *commits*)
 - ### ➕ ADD
     O comando "git add" serve para adicionar os arquivos com alterações realizadas no repositório dentro do *commit* a ser realizado posteriormente. Segue um exemplo prático:
 
