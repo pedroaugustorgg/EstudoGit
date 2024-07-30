@@ -3,19 +3,19 @@
 📗**Repositório de apoio/inspiração:** [leocomelli/git.md](https://gist.github.com/leocomelli/2545add34e4fec21ec16)
 
 ## ÍNDICE
- <a href="#section1">**1.**<img src="https://img.icons8.com/?size=100&id=4VuUVaM5Sn5D&format=png&color=000000" alt="clone" width="22px"> Clonando um repositório do GitHub para sua pasta local</a>
+ <a href="#section1" text-decoration=none>**1.**<img src="https://img.icons8.com/?size=100&id=4VuUVaM5Sn5D&format=png&color=000000" alt="clone" width="22px"> Clonando um repositório do GitHub para sua pasta local</a>
 
- <a href="#section2">**2.** ⚙️ Como setar seu usuário e e-mail do GitHub localmente para trabalhar com repositórios remotos (só precisa fazer uma vez)</a>
+ <a href="#section2" text-decoration=none>**2.** ⚙️ Como setar seu usuário e e-mail do GitHub localmente para trabalhar com repositórios remotos (só precisa fazer uma vez)</a>
 
- <a href="#section3">**3.** 🌐 → 🖥️ Sincronizando repositório LOCAL com conteúdo do repositório REMOTO do GitHub (*pull*)</a>
+ <a href="#section3" text-decoration=none>**3.** 🌐 → 🖥️ Sincronizando repositório LOCAL com conteúdo do repositório REMOTO do GitHub (*pull*)</a>
 
- <a href="#section4">**4.** 🛠️ Gestão de repositório (add, *branches* e *commits*)</a>
+ <a href="#section4" text-decoration=none>**4.** 🛠️ Gestão de repositório (add, *branches* e *commits*)</a>
 
- <a href="#section5">**5.** 🖥️ → 🌐 Sincronizando repositório REMOTO do GitHub com conteúdo do repositório LOCAL (*push*)</a>
+ <a href="#section5" text-decoration=none>**5.** 🖥️ → 🌐 Sincronizando repositório REMOTO do GitHub com conteúdo do repositório LOCAL (*push*)</a>
 
- <a href="#section6">**6.** 🆘 Resolução de conflitos (erros comuns)</a>
+ <a href="#section6" text-decoration=none>**6.** 🆘 Resolução de conflitos (erros comuns)</a>
 
- <a href="#section7">**7.** <img src="https://img.icons8.com/?size=100&id=K7ebDTcbruY8&format=png&color=000000" alt="teamgroup" width="25px"> Autores</a>
+ <a href="#section7" text-decoration=none>**7.** <img src="https://img.icons8.com/?size=100&id=K7ebDTcbruY8&format=png&color=000000" alt="teamgroup" width="25px"> Autores</a>
 
  <hr><br>
 
