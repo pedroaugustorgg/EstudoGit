@@ -2,9 +2,24 @@
 
 📗**Repositório de apoio/inspiração:** [leocomelli/git.md](https://gist.github.com/leocomelli/2545add34e4fec21ec16)
 
-# 🖥️ Principais comandos para seu versionamento de código via terminal com git:
+## ÍNDICE
+ <a href="#section1">1. 🖥️ Principais comandos para seu versionamento de código via terminal com git</a>
 
-## Clonando um repositório já existente para sua pasta local:
+ <a href="#section2">2. ⚙️ Como setar seu usuário e e-mail do GitHub localmente para trabalhar com repositórios remotos (só precisa fazer uma vez)</a>
+
+ <a href="#section3">3. 🌐 → 🖥️ Sincronizando repositório LOCAL com conteúdo do repositório REMOTO do GitHub:</a>
+
+ <a href="#section4">4. 🛠️ Gestão de repositório (add, *branches* e *commits*)</a>
+
+ <a href="#section5">5. 🖥️ → 🌐 Sincronizando repositório REMOTO do GitHub com conteúdo do repositório LOCAL:</a>
+
+ <a href="#section6">6. 🆘 Resolução de conflitos (erros comuns):</a>
+
+ <hr><br>
+
+##  <p id="section1"> 🖥️ Principais comandos para seu versionamento de código via terminal com git:
+
+### Clonando um repositório já existente para sua pasta local:
 - O comando "git clone" serve para clonar todo o repositório remoto diretamente na sua máquina, isso fará com que seja criado um arquivo oculto ".git" na pasta local onde vc irá clonar o repositório e você poderá começar a gerenciar o repositório localmente. É bem simples a execução do comando e ocorre da seguinte forma:
         
         git clone <URLdoRepositório>
@@ -15,7 +30,7 @@
 
 <br/> 
 
-## ⚙️ Como setar seu usuário e e-mail do GitHub localmente para trabalhar com repositórios remotos (só precisa fazer uma vez):
+## <p id="section2"> ⚙️ Como setar seu usuário e e-mail do GitHub localmente para trabalhar com repositórios remotos (só precisa fazer uma vez):
 - ### Setando usuário:
 
         git config --global user.name <NomeDoUsuário>
@@ -40,7 +55,7 @@
 
 <br/>
 
-## 🌐 → 🖥️ Sincronizando repositório LOCAL com conteúdo do repositório REMOTO do GitHub:
+## <p id="section3"> 🌐 → 🖥️ Sincronizando repositório LOCAL com conteúdo do repositório REMOTO do GitHub:
 - Caso seu usuário e e-mail já esteja sincronizado com o repositório:
         
         git pull
@@ -55,7 +70,7 @@
 
 <br/>
 
-## 🛠️ Gestão de repositório (add, *commits* e *branches*)
+## <p id="section4"> 🛠️ Gestão de repositório (add, *branches* e *commits*)
 - ### ADD ➕
     O comando "git add" serve para adicionar os arquivos com alterações realizadas no repositório dentro do *commit* a ser realizado posteriormente. Segue um exemplo prático:
 
@@ -67,8 +82,8 @@
 
 <br/>
 
-- ### BRANCHES 🧑‍🧒‍🧒
-    As *branches* são basicamente os "setores" dentro do mesmo repositório que podem ser utilizadas de forma simultânea e paralela ao setor/branche principal, que geramente é chamada de ***main*** ou ***master*** por padrão, porém pode ser qualquer nome que o dono do respositório queira chamar. Para visualizar as branches continas no repositório local, você pode utilizar o seguinte comando:
+- ### BRANCHES 〒⑁
+    As *branches* são basicamente os "setores" dentro do mesmo repositório que podem ser utilizadas de forma simultânea e paralela ao setor/branch principal, que geramente é chamada de ***main*** ou ***master*** por padrão, porém pode ser qualquer nome que o dono do respositório queira chamar. Para visualizar as branches continas no repositório local, você pode utilizar o seguinte comando:
             
             git branch
 
@@ -115,15 +130,17 @@
 
         git commit -m "Título do commit" -m "descrição do commit"
 
-  - 💡 **Dica valiosa:** A sequencia de comandos mais comum para verificar os arquivos editados e salvar todas as suas alterações locais em um commit é a seguinte:
+  - 💡 **Dica valiosa:** A sequencia de comandos mais comum para verificar os arquivos editados, salvar todas as suas alterações locais em um commit e mesclar com a branch principal do repositório (main ou master) é a seguinte:
 
         git status
         git add .
         git commit -m "Título do commit" -m "descrição do commit"
+        git checkout main
+        git merge <branch_com_alteracoes>
 
 <br/>
 
-### 🖥️ → 🌐 Sincronizando repositório REMOTO do GitHub com conteúdo do repositório LOCAL:
+## <p id="section5"> 🖥️ → 🌐 Sincronizando repositório REMOTO do GitHub com conteúdo do repositório LOCAL:
 - Com todos os commits devidamente realizados, você pode enviar tudo o que você fez localmente para atualizar o repositório remoto com o seguinte comando:
     
         git push <remoteURL> <NomeDaBranch>
@@ -143,32 +160,32 @@
 
 <br/>
 
-### 🆘 Resolução de conflitos (erros comuns):
+## <p id="section6"> 🆘 Resolução de conflitos (erros comuns):
 
-- ❌ **Erro:** *non-fast-forward*
+- ### ❌ Erro: *non-fast-forward*
   - **Problema:** Repositório local não sincronizado com repositório online e pode ocorrer durante um push
   - [Link com solução](https://docs.github.com/pt/enterprise-cloud@latest/get-started/using-git/dealing-with-non-fast-forward-errors) ✅ A dica é realizar uma sincronia do repositório remoto com o seurepositório local através do comando "git pull origin <nome_da_branch>"
   - Exemplo prático do erro:
 
+                $ git push 
                 ! [rejected]        main -> main (non-fast-forward)
 
-<br/>
-
-- ❌ **Erro:** *main does not match any*
+- ### ❌ Erro: *main does not match any*
   - **Problema:** Divergência de match entre as branches, pode ocorrer ao fazer um push do repositório local para o remoto.
-  - [Link com solução](https://stackoverflow.com/questions/4181861/message-src-refspec-master-does-not-match-any-when-pushing-commits-in-git) ✅ A dica é verificar se os nomes da(s) branch(es) local (comando "git branch") estão iguais aos nomes das branches remotas, após isso, realizar um push específico da branch desejada com o comando "git push origin <nome_da_branch>".
+  - [Link com solução](https://stackoverflow.com/questions/4181861/message-src-refspec-master-does-not-match-any-when-pushing-commits-in-git) ✅ Também pode ocorrer durante um push, a dica é verificar se os nomes da(s) branch(es) local (comando "git branch") estão iguais aos nomes das branches remotas, após isso, realizar um push específico da branch desejada com o comando "git push origin <nome_da_branch>".
   - Exemplo prático do erro:
         
+                $ git push
                 error: src refspec main does not match any
                 error: failed to push some refs to <URLdaBranch>
 
-<br/>
-
-- ❌ **Erro:** *Merge conflict*
-  - **Problema:** Como o merge automático é feito em arquivos textos que não sofreram alterações nas mesmas linhas, o merge manual precisa ser feito em arquivos textos que sofreram alterações nas mesmas linhas. Caso não seja feito, isso resultará em um conflito.
+- ### ❌ Erro: *Merge conflict*
+  - **Problema:** Ocorre durante um merge entre branches.Como o merge automático é feito em arquivos textos que não sofreram alterações nas mesmas linhas, o merge manual precisa ser feito em arquivos textos que sofreram alterações nas mesmas linhas. Caso não seja feito, isso resultará em um conflito.
   - [Link com solução](https://www.dio.me/articles/corrigindo-conflitos-em-merges-no-git) ✅ A dica é adicionar os arquivos com o comando "git add <nome_do_arquivo>" ou "git add .", commitar as alterações já adicionadas e realizar o merge posteriormente.
   - Exemplo prático do erro:
 
+                $ git checkout main
+                $ git merge DevPedro
                 Automerging <NomeDoArquivo.txt>
                 CONFLICT (content): Merge conflict in meu_arquivo.txt
                 Automatic merge failed; fix conflicts and then commit the result.
