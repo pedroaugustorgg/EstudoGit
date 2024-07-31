@@ -110,9 +110,15 @@
     - Para **CRIAR** uma branch, o seguinte comando deve ser executado:
 
             git branch <NomeDaBranch>
-        - 💡 **Dica valiosa:** Para criar uma nova branch e já trocar para ela, basta utilizar o comando -b, ficando da seguinte forma:
+        - 💡 **Dica valiosa¹:** Para criar uma nova branch e já trocar para ela, basta utilizar o comando -b, ficando da seguinte forma:
 
-                git branch -b <NomeDaBranch>
+                git branch -b <NomeNovaBranch>
+        - 💡 **Dica valiosa²:** Para criar uma nova branch baseada em outra e já trocar para ela, utilize o seguinte comando:
+
+                git branch -b <NomeNovaBranch> <NomeBranchRemota>
+          - Exemplo:
+
+                git branch -b CorrecaoBug main
 
     - Para **REMOVER** uma branch, o seguinte comando deve ser executado:
 
@@ -130,15 +136,11 @@
             
             git checkout main
             git merge DevPedro
-        - ⚠️ **Observação.:** Para realizar o merge, é necessário estar no branch que deverá receber as alterações. O merge pode ser automático ou manual. 
-
-                Automerging meu_arquivo.txt
-                CONFLICT (content): Merge conflict in meu_arquivo.txt
-                Automatic merge failed; fix conflicts and then commit the result.
+        - ⚠️ **Observação.:** Para realizar o merge, é necessário estar no branch que deverá receber as alterações. Neste caso acima, a *branch* "main" será mesclada com os conteúdos da *branch* "DevPedro"
 
     ### 💡 BONUS
     - ***REBASE*** entre *branches*
-        - O "rebase" serve basicamente para sincronizar uma branch com outra ([mais detalhes clicando aqui](https://git-scm.com/book/en/v2/Git-Branching-Rebasing)). Imaginando um cenário real, o rebase poderia ser utilizado para sincronizar uma branch de desenvolvimento com uma branch em produção. Segue um exemplo prático de uma sincronia da branch "developer" com a branch "main":
+        - O "rebase" é um método comum para integrar alterações do repositório remoto no repositório local ([mais detalhes clicando aqui](https://git-scm.com/book/en/v2/Git-Branching-Rebasing)). Imaginando um cenário real, o rebase poderia ser utilizado para sincronizar uma branch de desenvolvimento com uma branch em produção. Segue um exemplo prático de uma sincronia da branch "developer" com a branch "main":
 
                 git checkout developer
                 git rebase main
