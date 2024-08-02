@@ -77,14 +77,14 @@
     
             git push https://github.com/pedroaugustorgg/EstudoGit DevPedro
 
-- 💡 **Dica valiosa¹:** Para sincronizar todas as *branches* locais com as *branches* remotas (sem a necessidade de validar pull request no GitHub), basta utilizar o seguinte comando:
+- 💡 **Dica valiosa¹:** Para sincronizar todas as *branches* locais com as *branches* remotas (sem a necessidade de validar *pull request* no GitHub), basta utilizar o seguinte comando:
         
         git push --all
 
-- 💡 **Dica valiosa²:** Para sincronizar uma *branch* específica diretamente na *branch* remota (sem a necessidade de validar pull request no GitHub), deve-se utilizar o seguinte comando:
+- 💡 **Dica valiosa²:** Para sincronizar uma *branch* específica diretamente na *branch* remota (sem a necessidade de validar *pull request* no GitHub), deve-se utilizar o seguinte comando:
         
         git push --set-upstream origin <NomeBranchRemota>
-  - ⚠️ **Observação.:** NÃO irá funcionar caso seja o primeiro push da máquina local para o repositório remoto.
+  - ⚠️ **Observação.:** NÃO irá funcionar caso seja o primeiro *push* da máquina local para o repositório remoto.
 
 <br/>
 
@@ -134,15 +134,15 @@
             
             git checkout main
             git merge DevPedro
-        - ⚠️ **Observação.:** Para realizar o merge, é necessário estar na *branch* que deverá receber as alterações. Neste caso acima, a *branch* "main" será mesclada com os conteúdos da *branch* "DevPedro"
+        - ⚠️ **Observação.:** Para realizar o *merge*, é necessário estar na *branch* que deverá receber as alterações. Neste caso acima, a *branch* "main" será mesclada com os conteúdos da *branch* "DevPedro"
 
     ### 💡 BONUS
     - ***REBASE*** entre *branches*
-        - O "rebase" é um método comum para integrar alterações do repositório remoto no repositório local ([mais detalhes clicando aqui](https://git-scm.com/book/en/v2/Git-Branching-Rebasing)). Imaginando um cenário real, o rebase poderia ser utilizado para sincronizar uma *branch* de desenvolvimento com uma *branch* em produção. Segue um exemplo prático de uma sincronia da *branch* "developer" com a *branch* "main":
+        - O *rebase* é um método comum para integrar alterações do repositório remoto no repositório local ([mais detalhes clicando aqui](https://git-scm.com/book/en/v2/Git-Branching-Rebasing)). Imaginando um cenário real, o *rebase* poderia ser utilizado para sincronizar uma *branch* de desenvolvimento com uma *branch* em produção. Segue um exemplo prático de uma sincronia da *branch* "developer" com a *branch* "main":
 
                 git checkout developer
                 git rebase main
-          - ⚠️ **Importante:** O Rebase irá REFAZER sua *branch* local de acordo com a *branch* remota, ou seja, se houverem alterações realizadas (ou até mesmo *commits*) localmente, estas serão desfeitas.
+          - ⚠️ **Importante:** O *rebase* irá REFAZER sua *branch* local de acordo com a *branch* remota, ou seja, se houverem alterações realizadas (ou até mesmo *commits*) localmente, estas serão desfeitas.
 
 <br/>
 
@@ -166,9 +166,9 @@
 ## <p id="section6"> 🆘 Resolução de conflitos (erros comuns):
 
 - ### ❌ Erro: *non-fast-forward*
-  - **Problema:** Repositório local não sincronizado com repositório online e pode ocorrer durante um push.
+  - **Problema:** Repositório local não sincronizado com repositório online e pode ocorrer durante um *push*.
   - **Exemplo prático do erro:**
-    - ! [rejected]        main -> main (non-fast-forward)
+    - > ! [rejected]        main -> main (non-fast-forward)
   - **[Link com solução](https://docs.github.com/pt/enterprise-cloud@latest/get-started/using-git/dealing-with-non-fast-forward-errors)** ✅ A dica é realizar uma sincronia do repositório remoto com o seu repositório local através do comando "git pull", refazer as alterações que vc precisa e, daí sim, realizar o *push* posteriormente.
     - **Exemplo de solução genérica:**
 
@@ -178,9 +178,9 @@
 <br/>
 
 - ### ❌ Erro: *main does not match any*
-  - **Problema:** Divergência de match entre as *branches*, também pode ocorrer ao fazer um push do repositório local para o remoto.
+  - **Problema:** Divergência de match entre as *branches*, também pode ocorrer ao fazer um *push* do repositório local para o remoto.
   - **Exemplo prático do erro:**   
-    - error: src refspec main does not match any<br>error: failed to push some refs to &lt;URLdaBranch&gt;
+    - > error: src refspec main does not match any<br>error: failed to push some refs to &lt;URLdaBranch&gt;
   - **[Link com solução](https://stackoverflow.com/questions/4181861/message-src-refspec-master-does-not-match-any-when-pushing-commits-in-git)** ✅ A dica é verificar se o primeiro commit localmente do repositório já foi realizado. Caso ainda não tenha sido realizado, o primeiro *commit* deve ser feito e logo em seguida será possível realizar o *push* para a *branch* remota desejada com o comando "git push origin &lt;NomeBranchRemota&gt;".
     - **Exemplo de solução genérica:**
 
@@ -189,10 +189,10 @@
 <br/>
 
 - ### ❌ Erro: *Merge conflict*
-  - **Problema:** Ocorre durante um merge entre *branches*. Como o merge automático é feito em arquivos textos que não sofreram alterações nas mesmas linhas, o merge manual precisa ser feito em arquivos textos que sofreram alterações nas mesmas linhas. Caso não seja feito, isso resultará em um conflito.
+  - **Problema:** Ocorre durante um *merge* entre *branches*. Como o *merge* automático é feito em arquivos textos que não sofreram alterações nas mesmas linhas, o *merge* manual precisa ser feito em arquivos textos que sofreram alterações nas mesmas linhas. Caso não seja feito, isso resultará em um conflito.
   - **Exemplo prático do erro:**
-    - Automerging <NomeDoArquivo.txt><br>CONFLICT (content): Merge conflict in meu_arquivo.txt<br>Automatic merge failed; fix conflicts and then commit the result.
-  - **[Link com solução](https://www.dio.me/articles/corrigindo-conflitos-em-merges-no-git)** ✅ A dica é adicionar os arquivos com o comando "git add <nome_do_arquivo>" ou "git add .", commitar as alterações já adicionadas e realizar o merge posteriormente.
+    - > Automerging <NomeDoArquivo.txt><br>CONFLICT (content): Merge conflict in meu_arquivo.txt<br>Automatic merge failed; fix conflicts and then commit the result.
+  - **[Link com solução](https://www.dio.me/articles/corrigindo-conflitos-em-merges-no-git)** ✅ A dica é adicionar os arquivos com o comando "git add <nome_do_arquivo>" ou "git add .", commitar as alterações já adicionadas e realizar o *merge* posteriormente.
     - **Exemplo de solução genérica:**
 
                 git checkout <NomeBranchAlterada>
@@ -204,9 +204,9 @@
 <br/>
 
 - ### ❌ Erro: *Pulling is not possible*
-  - **Problema:** Normalmente ocorre quando você tenta realizar um pull (puxar conteúdo do repositório remoto para o local) e existe alguma alteração no seu repositório local que precisa ser desfeita ou commitada para ser possível seguir com o pull.
+  - **Problema:** Normalmente ocorre quando você tenta realizar um *pull* (puxar conteúdo do repositório remoto para o local) e existe alguma alteração no seu repositório local que precisa ser desfeita ou commitada para ser possível seguir com o *pull*.
   - **Exemplo prático do erro:**
-    - error: Pulling is not possible because you have unmerged files.<br>hint: Fix them up in the work tree, and then use 'git add/rm &lt;file&gt;'<br>hint: as appropriate to mark resolution and make a commit.<br>fatal: Exiting because of an unresolved conflict.
+    - > error: Pulling is not possible because you have unmerged files.<br>hint: Fix them up in the work tree, and then use 'git add/rm &lt;file&gt;'<br>hint: as appropriate to mark resolution and make a commit.<br>fatal: Exiting because of an unresolved conflict.
   - **[Link com solução](https://stackoverflow.com/questions/26376832/why-does-git-say-pull-is-not-possible-because-you-have-unmerged-files)** ✅ A dica pra solucionar esta intercorrência é conferir alterações ainda não commitadas com o comando "git status" e realizar o *commit* ou desfazer alguma alteração com o comando "git checkout <arquivo.txt>".
     - **Exemplo de solução genérica:**
 
