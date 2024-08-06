@@ -13,7 +13,7 @@
 
  <a href="#section6" style="text-decoration:none;">**6.** 🆘 Resolução de conflitos (erros comuns)</a>
 
- <a href="#section7" style="text-decoration:none;">**7.** <img src="https://img.icons8.com/?size=100&id=K7ebDTcbruY8&format=png&color=000000" alt="teamgroup" width="25px"> Autores e menção honrosa</a>
+ <a href="#section7" style="text-decoration:none;">**7.** 📗 Menção Honrosa</a>
 
  <hr><br>
 
@@ -136,13 +136,15 @@
             git merge DevPedro
         - ⚠️ **Observação.:** Para realizar o *merge*, é necessário estar na *branch* que deverá receber as alterações. Neste caso acima, a *branch* "main" será mesclada com os conteúdos da *branch* "DevPedro"
 
-    ### 💡 BONUS
+    ### <p id="rebase"> 💡 BONUS
     - ***REBASE*** entre *branches*
-        - O *rebase* é um método comum para integrar alterações do repositório remoto no repositório local ([mais detalhes clicando aqui](https://git-scm.com/book/en/v2/Git-Branching-Rebasing)). Imaginando um cenário real, o *rebase* poderia ser utilizado para sincronizar uma *branch* de desenvolvimento com uma *branch* em produção. Segue um exemplo prático de uma sincronia da *branch* "developer" com a *branch* "main":
+        - O *rebase* é um método comum para importar alterações do repositório remoto para o repositório local ([mais detalhes clicando aqui](https://git-scm.com/book/en/v2/Git-Branching-Rebasing)), porém descartando alterações locais não sincronizadas. 
+        
+        Para melhor entendimento, vamos imaginar um **cenário prático:** Em um cenário hipotético onde o desenvolvedor precisa corrigir um _bug_ que está em produção, o *rebase* poderia ser utilizado para sincronizar uma *branch* de desenvolvimento com uma *branch* já em produção exatamente como ela se encontra remotamente. Segue um exemplo prático de uma sincronia da *branch* "developer" local com a *branch* "main" remota:
 
                 git checkout developer
                 git rebase main
-          - ⚠️ **Importante:** O *rebase* irá REFAZER sua *branch* local de acordo com a *branch* remota, ou seja, se houverem alterações realizadas (ou até mesmo *commits*) localmente, estas serão desfeitas.
+        - ⚠️ **Importante:** O *rebase* irá REFAZER sua *branch* local de acordo com a *branch* remota, ou seja, se houverem alterações realizadas (ou até mesmo *commits*) localmente, estas serão desfeitas.
 
 <br/>
 
@@ -175,6 +177,7 @@
                 git pull origin <NomeBranchLocal>
                 git add .
                 git commit -m "TítuloDoCommit" -m "Descrição + Resolução de conflito na atualização de repositório local"
+  - 💡 **Dica valiosa:** Caso não esteja conseguindo fazer o "git pull", você pode tentar um <a href="#rebase"> *rebase*</a> (levando em consideração que todas as alterações locais serão perdidas).
 <br/>
 
 - ### ❌ Erro: *main does not match any*
@@ -200,7 +203,6 @@
                 git commit -m "TítuloDoCommit" -m "Descrição + Resolução de conflito no merge"
                 git checkout main
                 git merge <NomeBranchAlterada>
-
 <br/>
 
 - ### ❌ Erro: *Pulling is not possible*
@@ -213,18 +215,9 @@
                 git add .
                 git commit -m "TítuloDoCommit" -m "Descrição + Resolução de conflito no pull"
                 git pull origin main
-
-    - 💡 **Dica valiosa:** Para desfazer TODAS as alterações locais NÃO COMITADAS você pode usar o comando "git reset --hard HEAD".
-
+  - 💡 **Dica valiosa:** Para desfazer TODAS as alterações locais NÃO COMITADAS você pode usar o comando "git reset --hard HEAD".
 <br/>
 
-## <p id="section7"> <img src="https://img.icons8.com/?size=100&id=K7ebDTcbruY8&format=png&color=000000" alt="teamgroup" width="30px"> Autores
-
-| [<img loading="lazy" src="https://avatars.githubusercontent.com/u/165854883?v=4" width=115><br><sub>Gabriel Campos</sub>](https://github.com/Super-Link) |  [<img loading="lazy" src="https://avatars.githubusercontent.com/u/80770771? v=4" width=115><br><sub>Pedro Guedes</sub>](https://github.com/pedroaugustorgg) |  [<img loading="lazy" src="https://avatars.githubusercontent.com/u/93458723?v=4" width=115><br><sub>Sergio Campos</sub>](https://github.com/camposcomunicacao) |
-| :---: | :---: | :---: |
-
-<br/>
-
-## 📗 Menção honrosa
+## <p id="section7"> 📗 Menção Honrosa
 
 **Repositório de apoio/inspiração:** [leocomelli/git.md](https://gist.github.com/leocomelli/2545add34e4fec21ec16)
