@@ -66,6 +66,19 @@
     
             git pull https://github.com/pedroaugustorgg/EstudoGit
 
+- ### <p id="rebase"> <img src="https://img.icons8.com/?size=100&id=7Eypi8y1guZz&format=png&color=000000" alt="rebase" width="25px"> ***REBASE*** entre *branches*
+  - O *rebase* é um método comum para importar alterações do repositório remoto para o repositório local ([mais detalhes clicando aqui](https://git-scm.com/book/en/v2/Git-Branching-Rebasing)), porém descartando alterações locais não sincronizadas. 
+    - Para melhor entendimento, vamos imaginar um **cenário prático:** Em um cenário hipotético onde o desenvolvedor precisa corrigir um _bug_ que está em produção, o *rebase* poderia ser utilizado para sincronizar uma *branch* de desenvolvimento com uma *branch* já em produção exatamente como ela se encontra remotamente. Segue um exemplo prático de uma sincronia da *branch* "developer" local com a *branch* "main" remota:
+
+                git checkout developer
+                git rebase main
+
+  - 💡 **Dica valiosa:** Para recuperar todas as alterações do repositório remoto e, em seguida, reorganizar o histórico de commits local, movendo os commits locais para frente na árvore de commits, após os commits recuperados do repositório remoto. Utilize o seguinte comando:
+        
+                git pull –-rebase
+
+    - ⚠️ **Importante:** O *rebase* irá REFAZER suas *branches* locais de acordo com as *branches* remotas, ou seja, se houverem alterações realizadas localmente (ou até mesmo *commits*), estas serão desfeitas.
+
 <br/>
 
 ## <p id="section4"> 🖥️ → 🌐 Sincronizando repositório REMOTO do GitHub com conteúdo do repositório LOCAL (*push*):
@@ -144,19 +157,6 @@
             git checkout main
             git merge DevPedro
         - ⚠️ **Observação.:** Para realizar o *merge*, é necessário estar na *branch* que deverá receber as alterações. Neste caso acima, a *branch* "main" será mesclada com os conteúdos da *branch* "DevPedro"
-
-- ### <p id="rebase"> <img src="https://img.icons8.com/?size=100&id=7Eypi8y1guZz&format=png&color=000000" alt="rebase" width="25px"> ***REBASE*** entre *branches*
-  - O *rebase* é um método comum para importar alterações do repositório remoto para o repositório local ([mais detalhes clicando aqui](https://git-scm.com/book/en/v2/Git-Branching-Rebasing)), porém descartando alterações locais não sincronizadas. 
-    - Para melhor entendimento, vamos imaginar um **cenário prático:** Em um cenário hipotético onde o desenvolvedor precisa corrigir um _bug_ que está em produção, o *rebase* poderia ser utilizado para sincronizar uma *branch* de desenvolvimento com uma *branch* já em produção exatamente como ela se encontra remotamente. Segue um exemplo prático de uma sincronia da *branch* "developer" local com a *branch* "main" remota:
-
-                git checkout developer
-                git rebase main
-
-  - 💡 **Dica valiosa:** Para recuperar todas as alterações do repositório remoto e, em seguida, reorganizar o histórico de commits local, movendo os commits locais para frente na árvore de commits, após os commits recuperados do repositório remoto. Utilize o seguinte comando:
-        
-                git pull –-rebase
-
-    - ⚠️ **Importante:** O *rebase* irá REFAZER suas *branches* locais de acordo com as *branches* remotas, ou seja, se houverem alterações realizadas localmente (ou até mesmo *commits*), estas serão desfeitas.
 
 <br/>
 
